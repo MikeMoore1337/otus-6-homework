@@ -13,10 +13,10 @@ def test_add_product(browser, url):
     auth.products()
     add = AddProduct(browser, url)
     add.add_new()
-    add.name_product()
-    add.meta_teg()
+    add.input_name_product()
+    add.input_meta_teg()
     add.link_data()
-    add.model()
+    add.input_model()
     add.save()
 
 
