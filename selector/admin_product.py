@@ -31,11 +31,11 @@ class Login(BasePage):
     def open(self, url):
         self.browser.get(url + LoginAdminSelector.POSTFIX_URL)
 
-    def login(self):
+    def input_login(self):
         login = self.find_element_with_wait(LoginAdminSelector.login).send_keys("user")
         return login
 
-    def password(self):
+    def input_password(self):
         password = self.find_element_with_wait(LoginAdminSelector.password).send_keys("bitnami")
         return password
 
@@ -54,11 +54,11 @@ class Login(BasePage):
 
 class AddProduct(BasePage):
 
-    def name_product(self):
+    def input_name_product(self):
         name_product = self.find_element_with_wait(AddProductSelector.name_product).send_keys("123456789")
         return name_product
 
-    def meta_teg(self):
+    def input_meta_teg(self):
         meta_teg = self.find_element_with_wait(AddProductSelector.meta_teg).send_keys("123456789")
         return meta_teg
 
@@ -66,7 +66,7 @@ class AddProduct(BasePage):
         link_data = self.find_element_with_wait(AddProductSelector.link_data).click()
         return link_data
 
-    def model(self):
+    def input_model(self):
         model = self.find_element_with_wait(AddProductSelector.model).send_keys("123456")
         return model
 
