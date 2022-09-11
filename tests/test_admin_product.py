@@ -6,8 +6,8 @@ from selector.admin_product import DeleteProduct
 def test_add_product(browser, url):
     auth = Login(browser, url)
     auth.open(url)
-    auth.login()
-    auth.password()
+    auth.input_login()
+    auth.input_password()
     auth.login_button()
     auth.catalog()
     auth.products()
@@ -23,8 +23,8 @@ def test_add_product(browser, url):
 def test_delete_product(browser, url):
     auth = Login(browser, url)
     auth.open(url)
-    auth.login()
-    auth.password()
+    auth.input_login()
+    auth.input_password()
     auth.login_button()
     auth.catalog()
     auth.products()
